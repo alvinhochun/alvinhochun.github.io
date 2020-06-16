@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script type="module">
+        import { run_script, default as init } from './wasm_module.js';
+
+        async function run() {
+            await init('./wasm_module_bg.wasm');
+
+            // This makes the functions available to the window context:
+            window.run_script = run_script;
+        }
+
+        run();
+    </script>
+    <script>
+        function btnClick() {
+            let resultEl = document.getElementById('result');
+            resultEl.value = `Running script at ${new Date()}\n\n`;
+            try {
+                let result = run_script(document.getElementById('scriptText').value, s => {
+                    resultEl.value += `[PRINT] ${s}\n`;
+                }, s => {
+                    resultEl.value += `[DEBUG] ${s}\n`;
+                });
+                resultEl.value += `\nScript returned: "${result}"`;
+            } catch (ex) {
+                resultEl.value += `\nEXCEPTION: "${ex}"`;
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <form onSubmit="return false">
+        <textarea style="width: 100%; height: 400px;" id="scriptText" spellcheck="false">// --- Demo ---
+
+fn add(a, b) {
+    a + b
+}
+
+print("Hello world!");
+
+let a = 1;
+let b = 2;
+debug("a = " + a);
+a += 1;
+debug("a = " + a);
+let res = add(a, b);
+debug("res = " + res);
+res // The result is returned.
+</textarea><br>
+        <button type="button" onClick="btnClick()">Run script</button><br>
+        <textarea readonly id="result" style="width: 100%; height: 300px;" autocomplete="off"></textarea>
+    </form>
+</body>
+<html>
