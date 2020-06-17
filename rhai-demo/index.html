@@ -17,7 +17,7 @@
     <script>
         function btnClick() {
             let resultEl = document.getElementById('result');
-            resultEl.value = `Running script at ${new Date()}\n\n`;
+            resultEl.value = `Running script at ${new Date().toISOString()}\n\n`;
             try {
                 let result = run_script(document.getElementById('scriptText').value, s => {
                     resultEl.value += `[PRINT] ${s}\n`;
@@ -28,6 +28,7 @@
             } catch (ex) {
                 resultEl.value += `\nEXCEPTION: "${ex}"`;
             }
+            resultEl.value += `\nFinished at ${new Date().toISOString()}`;
         }
     </script>
 </head>
@@ -55,4 +56,4 @@ res // The result is returned.
         <textarea readonly id="result" style="width: 100%; height: 300px;" autocomplete="off"></textarea>
     </form>
 </body>
-<html>
+</html>
