@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>(Demo) Rhai Playground</title>
+  <title>My Rust + Webpack project!</title>
   <style type="text/css">
   html, body {
     height: 100%;
@@ -15,12 +15,12 @@
     max-height: 100%;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: auto 1fr 1fr;
+    grid-template-rows: 40px 1fr 1fr;
   }
   @media screen and (min-width: 900px) {
     #topContainer {
       grid-template-columns: 1fr 1fr;
-      grid-template-rows: auto 1fr;
+      grid-template-rows: 40px 1fr;
     }
     #header {
       grid-column-start: 1;
@@ -41,16 +41,9 @@
     border: 1px solid #ccc;
     height: 100% !important;
     box-sizing: border-box;
-    font-size: 11pt;
   }
   .CodeMirror .rhai-error {
     text-decoration: underline wavy red;
-  }
-  .CodeMirror .cm-matchhighlight {
-    background-color: rgba(0, 0, 0, 0.1);
-  }
-  .CodeMirror .CodeMirror-selection-highlight-scrollbar {
-    background-color: rgba(0, 0, 0, 0.1);
   }
   </style>
 </head>
@@ -59,16 +52,7 @@
   <div id="topContainer">
     <header id="header">
       <button type="button" onClick="btnClick()">Run script (<kbd>Ctrl</kbd>+<kbd>Enter</kbd>)</button>
-      <select id="exampleScriptSelect">
-        <option value="">(example scripts...)</option>
-      </select>
-      <label style="display: inline-block;">
-        Theme:
-        <select id="cmThemeSelect">
-          <option value="default">Default</option>
-        </select>
-      </label>
-      <a href="https://github.com/alvinhochun/rhai-playground/commit/fc6600af06280d9feab7c72d2dc9270f4ec02d72">rhai-playground commit fc6600a</a>
+      <a href="https://github.com/alvinhochun/rhai-playground/commit/1f7da3a96498a9d8be4610ddd6cd3754dcf2d425">rhai-playground commit 1f7da3a</a>
     </header>
     <div id="editorContainer"></div>
     <div id="outputContainer">
