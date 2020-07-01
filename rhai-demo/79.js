@@ -1,1 +1,1 @@
-(this.webpackJsonp=this.webpackJsonp||[]).push([[79],{53:function(n,t,r){"use strict";r.r(t),t.default='print("The result should be 182:");\r\n\r\nlet x = 12 + 34 * 5;\r\nprint(x);\r\n'}}]);
+(this.webpackJsonp=this.webpackJsonp||[]).push([[79],{53:function(n,s,t){"use strict";t.r(s),s.default='print("The result should be 46:");\r\n\r\nprint(34 + 12);\r\n'}}]);
