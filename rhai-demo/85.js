@@ -1,0 +1,1 @@
+(this.webpackJsonp=this.webpackJsonp||[]).push([[85],{59:function(n,r,s){"use strict";s.r(r),r.default="// This script runs a while loop\r\n\r\nlet x = 10;\r\n\r\nwhile x > 0 {\r\n    print(x);\r\n    x -= 1;\r\n}\r\n"}}]);

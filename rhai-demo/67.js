@@ -1,1 +1,1 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[67],{25:function(n,e,a){"use strict";a.r(e),e.default="// I am a single line comment!\r\n\r\nlet /* I am a spy in a variable declaration! */ x = 5;\r\n\r\n/* I am a simple\r\n   multi-line\r\n   comment */\r\n\r\n/* look /* at /* that, /* multi-line */ comments */ can be */ nested */\r\n\r\n/* surrounded by */ x // comments\r\n"}}]);
+(this.webpackJsonp=this.webpackJsonp||[]).push([[67],{41:function(n,t,r){"use strict";r.r(t),t.default='print("x should be 78:");\r\n\r\nlet x = 78;\r\nprint(x);\r\n'}}]);
