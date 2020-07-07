@@ -1,1 +1,0 @@
-(this.webpackJsonp=this.webpackJsonp||[]).push([[74],{37:function(n,r,s){"use strict";s.r(r),r.default='// This script defines a function with many parameters and calls it\r\n\r\nfn f(a, b, c, d, e, f) {\r\n    a - b * c - d * e - f\r\n}\r\n\r\nprint("f() call should be 4:");\r\n\r\nprint(f(100, 5, 2, 9, 6, 32));\r\n'}}]);

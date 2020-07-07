@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[77],{35:function(n,r,e){"use strict";e.r(r),r.default='print("The result should be 46:");\r\n\r\nprint(34 + 12);\r\n'}}]);

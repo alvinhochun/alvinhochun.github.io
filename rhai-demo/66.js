@@ -1,1 +1,0 @@
-(this.webpackJsonp=this.webpackJsonp||[]).push([[66],{40:function(n,r,t){"use strict";t.r(r),r.default='let x = [1, 2, 3];\r\n\r\nprint("x[1] should be 2:");\r\nprint(x[1]);\r\n\r\nx[1] = 5;\r\n\r\nprint("x[1] should be 5:");\r\nprint(x[1]);\r\n'}}]);
